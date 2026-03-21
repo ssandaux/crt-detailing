@@ -58,7 +58,7 @@ export default function WhyUs() {
           initial={{ opacity: 0, x: 30 }}
           animate={isInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.9, delay: 0.1 }}
-          className="flex flex-col justify-center px-8 md:px-16 lg:px-20 py-16 md:py-24 order-1 md:order-2 border-b md:border-b-0 md:border-l border-brand-gray-700"
+          className="flex flex-col justify-center px-0 md:px-16 lg:px-20 py-10 md:py-24 order-1 md:order-2 border-b md:border-b-0 md:border-l border-brand-gray-700"
         >
           <p className="label-text text-brand-red mb-6">Why us</p>
           <h2

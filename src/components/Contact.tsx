@@ -53,7 +53,7 @@ export default function Contact() {
           className="flex flex-col gap-4"
         >
           <p className="label-text text-brand-red">Get in touch</p>
-          <div className="flex items-center justify-between gap-6">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 md:gap-6">
             <h2
               className="font-display leading-none"
               style={{ fontSize: "clamp(3.5rem, 11vw, 10rem)" }}

@@ -47,7 +47,7 @@ export default function Footer() {
           </div>
 
           {/* Contact info */}
-          <div>
+          <div className="col-span-2 md:col-span-1">
             <p className="label-text text-brand-white mb-5">Contact</p>
             <ul className="space-y-3">
               <li><a href="tel:+48501234567" className="label-text hover:text-brand-white transition-colors duration-200">+48 501 234 567</a></li>

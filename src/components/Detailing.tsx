@@ -36,14 +36,14 @@ export default function Detailing() {
           className="flex flex-col gap-4"
         >
           <p className="label-text text-brand-red">Studio work</p>
-          <div className="flex items-center justify-between gap-6">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 md:gap-6">
             <h2
               className="font-display text-brand-white leading-none"
               style={{ fontSize: "clamp(3.5rem, 10vw, 9rem)" }}
             >
               DETAILING
             </h2>
-            <p className="font-body text-sm text-brand-gray-300 leading-relaxed max-w-xs">
+            <p className="font-body text-sm text-brand-gray-300 leading-relaxed md:max-w-xs">
               Professional-grade products. Proven techniques. Flawless results, every time.
             </p>
           </div>

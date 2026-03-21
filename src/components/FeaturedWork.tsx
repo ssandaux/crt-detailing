@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
 import { CardStack } from "@/components/ui/card-stack";
 import { MotionButton } from "@/components/ui/motion-button";
@@ -53,6 +53,19 @@ const works = [
 export default function FeaturedWork() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-60px" });
+  const [cardW, setCardW] = useState(460);
+  const [cardH, setCardH] = useState(295);
+
+  useEffect(() => {
+    const update = () => {
+      const mobile = window.innerWidth < 768;
+      setCardW(mobile ? Math.min(window.innerWidth - 48, 350) : 460);
+      setCardH(mobile ? 220 : 295);
+    };
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, []);
 
   return (
     <section className="bg-brand-black border-t border-brand-gray-700 overflow-hidden">
@@ -64,8 +77,8 @@ export default function FeaturedWork() {
           transition={{ duration: 0.8 }}
           className="flex flex-col gap-4"
         >
-          <p className="label-text text-brand-red">— Full range</p>
-          <div className="flex items-center justify-between gap-6">
+          <p className="label-text text-brand-red">Full range</p>
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 md:gap-6">
             <h2
               className="font-display text-brand-white leading-none"
               style={{ fontSize: "clamp(4rem, 12vw, 11rem)" }}
@@ -92,8 +105,8 @@ export default function FeaturedWork() {
           intervalMs={3200}
           pauseOnHover
           showDots
-          cardWidth={460}
-          cardHeight={295}
+          cardWidth={cardW}
+          cardHeight={cardH}
           maxVisible={5}
           overlap={0.55}
           spreadDeg={34}

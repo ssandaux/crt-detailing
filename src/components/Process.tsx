@@ -39,8 +39,41 @@ export default function Process() {
         </motion.div>
       </div>
 
-      {/* Roadmap */}
-      <div className="editorial-container py-10 md:py-12 overflow-x-auto">
+      {/* Mobile: vertical stack */}
+      <div className="editorial-container py-10 md:hidden">
+        <div className="flex flex-col">
+          {steps.map((step, i) => (
+            <motion.div
+              key={step.num}
+              initial={{ opacity: 0, x: -20 }}
+              animate={isInView ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.15 + i * 0.08 }}
+              className={`flex items-start gap-5 py-5 ${i < steps.length - 1 ? "border-b border-brand-gray-700" : ""}`}
+            >
+              <span
+                className="font-display text-brand-red leading-none shrink-0 w-14"
+                style={{ fontSize: "clamp(2rem, 8vw, 2.8rem)" }}
+              >
+                {step.num}
+              </span>
+              <div className="flex flex-col gap-1 pt-1">
+                <h3
+                  className="font-display text-brand-white leading-none"
+                  style={{ fontSize: "clamp(1.2rem, 5vw, 1.6rem)" }}
+                >
+                  {step.title}
+                </h3>
+                <p className="font-body text-xs text-brand-gray-500 leading-relaxed mt-1">
+                  {step.desc}
+                </p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+
+      {/* Desktop: horizontal roadmap */}
+      <div className="editorial-container py-12 overflow-x-auto hidden md:block">
         <div className="flex items-start min-w-[640px]">
           {steps.map((step, i) => (
             <React.Fragment key={step.num}>
@@ -50,29 +83,23 @@ export default function Process() {
                 transition={{ duration: 0.55, delay: 0.2 + i * 0.1 }}
                 className="flex-1 flex flex-col gap-3"
               >
-                {/* Big number */}
                 <span
                   className="font-display text-brand-red leading-none"
                   style={{ fontSize: "clamp(3rem, 5vw, 5rem)" }}
                 >
                   {step.num}
                 </span>
-
-                {/* Title */}
                 <h3
                   className="font-display text-brand-white leading-none"
                   style={{ fontSize: "clamp(1.4rem, 2.2vw, 2rem)" }}
                 >
                   {step.title}
                 </h3>
-
-                {/* Desc */}
                 <p className="font-body text-xs text-brand-gray-500 leading-relaxed pr-6 max-w-[160px]">
                   {step.desc}
                 </p>
               </motion.div>
 
-              {/* Arrow connector */}
               {i < steps.length - 1 && (
                 <motion.div
                   initial={{ opacity: 0 }}
@@ -87,7 +114,6 @@ export default function Process() {
           ))}
         </div>
       </div>
-
     </section>
   );
 }

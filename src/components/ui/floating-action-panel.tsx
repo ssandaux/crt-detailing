@@ -1,11 +1,11 @@
 "use client";
 
 import * as React from "react";
-import { AnimatePresence, MotionConfig, motion } from "framer-motion";
+import { AnimatePresence, MotionConfig, motion, type Transition } from "framer-motion";
 import { cn } from "@/lib/utils";
 
-const TRANSITION = {
-  type: "spring" as const,
+const TRANSITION: Transition = {
+  type: "spring",
   bounce: 0.1,
   duration: 0.4,
 };
