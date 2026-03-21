@@ -47,7 +47,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.2, delay: 1.0 }}
-        className="absolute z-[26] left-6 md:left-10 top-[7%] md:top-1/2 md:-translate-y-1/2 flex flex-col items-center gap-3"
+        className="absolute z-[26] left-6 md:left-10 top-[7%] md:top-1/2 md:-translate-y-1/2 flex flex-col items-center gap-3 scale-[0.55] md:scale-100 origin-top-left"
       >
         <div className="w-px h-20 bg-brand-gray-700" />
         <p
@@ -64,7 +64,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.2, delay: 1.0 }}
-        className="absolute z-[26] right-6 md:right-10 bottom-[120px] md:bottom-auto md:top-1/2 md:-translate-y-1/2 flex flex-col items-center gap-3"
+        className="absolute z-[26] right-6 md:right-10 bottom-[120px] md:bottom-auto md:top-1/2 md:-translate-y-1/2 flex flex-col items-center gap-3 scale-[0.55] md:scale-100 origin-bottom-right"
       >
         <div className="w-1 h-1 bg-brand-red" />
         <p

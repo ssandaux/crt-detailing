@@ -53,7 +53,8 @@ export default function Services() {
                 className={`group flex flex-col cursor-pointer
                   border-t-2 border-t-transparent hover:border-t-brand-red
                   transition-all duration-300
-                  ${i % 2 !== 0 ? "border-l border-brand-gray-700" : ""}
+                  ${i === 4 ? "col-span-2 md:col-span-1" : ""}
+                  ${i % 2 !== 0 && i !== 4 ? "border-l border-brand-gray-700" : ""}
                   ${i > 0 && i % 2 === 0 ? "md:border-l md:border-brand-gray-700" : ""}
                   ${i < 4 ? "border-b border-brand-gray-700 md:border-b-0" : ""}
                 `}

@@ -40,8 +40,8 @@ export default function Navbar() {
         }`}
       >
         <div className="editorial-container flex items-center justify-between">
-          {/* Logo */}
-          <a href="#" className="flex items-center">
+          {/* Logo — hide when menu open to avoid double logo */}
+          <a href="#" className={`flex items-center transition-opacity duration-300 ${menuOpen ? "opacity-0 pointer-events-none" : ""}`}>
             <Image src="/images/logi.png" alt="Redline" width={120} height={40} className="object-contain" />
           </a>
 
@@ -121,14 +121,13 @@ export default function Navbar() {
             transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
             className="fixed inset-0 bg-brand-black z-40 flex flex-col justify-between overflow-hidden"
           >
-            {/* Top bar */}
-            <div className="editorial-container pt-6 pb-0 flex items-center justify-between border-b border-brand-gray-700 pb-6">
+            {/* Top bar — logo centered */}
+            <div className="editorial-container pt-6 pb-6 flex items-center justify-center border-b border-brand-gray-700">
               <Image src="/images/logi.png" alt="Redline" width={120} height={40} className="object-contain" />
-              <p className="label-text text-brand-gray-500">Menu</p>
             </div>
 
-            {/* Nav links */}
-            <div className="flex-1 flex items-center editorial-container">
+            {/* Nav links — centered */}
+            <div className="flex-1 flex items-center justify-center editorial-container">
               <MenuVertical
                 menuItems={navLinks}
                 color="#D42B2B"
@@ -136,9 +135,9 @@ export default function Navbar() {
               />
             </div>
 
-            {/* Bottom info bar */}
-            <div className="editorial-container border-t border-brand-gray-700 py-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-              <div className="flex flex-col gap-1">
+            {/* Bottom info bar — centered on mobile */}
+            <div className="editorial-container border-t border-brand-gray-700 py-6 flex flex-col items-center md:flex-row md:items-center md:justify-between gap-4">
+              <div className="flex flex-col items-center md:items-start gap-1">
                 <a href="tel:+15550000000" className="label-text text-brand-gray-300 hover:text-brand-white transition-colors">
                   +1 (555) 000-0000
                 </a>

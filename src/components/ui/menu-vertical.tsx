@@ -49,7 +49,7 @@ export function MenuVertical({
               hover: { x: 0, color, skewX: skew },
             }}
             transition={{ duration: 0.3, ease: "easeOut" }}
-            className="font-display text-5xl md:text-6xl no-underline leading-none tracking-wide"
+            className="font-display text-6xl md:text-7xl no-underline leading-none tracking-wide"
           >
             {item.label}
           </motion.a>
