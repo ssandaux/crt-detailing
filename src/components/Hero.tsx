@@ -29,7 +29,7 @@ export default function Hero() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9, ease: [0.25, 0.1, 0.25, 1], delay: 0.2 }}
-        className="absolute z-[10] w-full text-center top-[27%] md:top-[15%]"
+        className="absolute z-[10] w-full text-center top-[31%] md:top-[15%]"
       >
         <h1
           className="font-display text-brand-white leading-none select-none whitespace-nowrap"
@@ -86,7 +86,7 @@ export default function Hero() {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.0, ease: [0.25, 0.1, 0.25, 1], delay: 0.5 }}
-        className="absolute z-[20] w-full top-[30%] h-[60vh] md:top-auto md:bottom-0 md:h-[88vh]"
+        className="absolute z-[20] w-full top-[24%] h-[60vh] md:top-auto md:bottom-0 md:h-[88vh]"
         style={{ left: 0 }}
       >
         {/* Car images */}
