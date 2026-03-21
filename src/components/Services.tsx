@@ -50,12 +50,6 @@ export default function Services() {
             transition={{ duration: 0.5, delay: 0.15 + i * 0.08 }}
             className={`group flex items-center gap-4 py-5 ${i < services.length - 1 ? "border-b border-brand-gray-700" : ""}`}
           >
-            <span
-              className="font-display text-brand-red leading-none shrink-0 w-10"
-              style={{ fontSize: "clamp(1.6rem, 6vw, 2rem)" }}
-            >
-              {s.number}
-            </span>
             <h3
               className="font-display text-brand-white leading-none flex-1"
               style={{ fontSize: "clamp(1.4rem, 5.5vw, 1.8rem)" }}

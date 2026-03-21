@@ -26,7 +26,7 @@ export default function Detailing() {
   return (
     <section id="detailing" className="bg-brand-black border-t border-brand-gray-700">
       {/* Section heading */}
-      <div className="editorial-container pt-20 pb-12 border-b border-brand-gray-700">
+      <div className="editorial-container pt-8 pb-6 md:pt-20 md:pb-12 border-b border-brand-gray-700">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 30 }}
@@ -93,7 +93,7 @@ export default function Detailing() {
       </div>
 
       {/* Stats bar */}
-      <div className="editorial-container py-20 md:py-28">
+      <div className="editorial-container py-8 md:py-28">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-12 md:gap-6">
           {[
             { v: "500+", l: "Cars Detailed" },

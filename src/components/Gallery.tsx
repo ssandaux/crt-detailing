@@ -19,7 +19,7 @@ export default function Gallery() {
   return (
     <section id="gallery" className="bg-brand-black border-t border-brand-gray-700">
       {/* Massive heading */}
-      <div className="editorial-container pt-20 pb-0">
+      <div className="editorial-container pt-8 pb-0 md:pt-20">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 30 }}
@@ -43,7 +43,7 @@ export default function Gallery() {
       </div>
 
       {/* Asymmetric grid */}
-      <div className="editorial-container py-10">
+      <div className="editorial-container py-6 md:py-10">
         {/* Desktop */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
