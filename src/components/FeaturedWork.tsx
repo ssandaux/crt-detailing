@@ -69,7 +69,7 @@ export default function FeaturedWork() {
 
   return (
     <section className="bg-brand-black border-t border-brand-gray-700 overflow-hidden">
-      <div className="editorial-container pt-16 md:pt-20 pb-6 md:pb-8">
+      <div className="editorial-container pt-10 md:pt-20 pb-3 md:pb-8">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 40 }}
@@ -97,7 +97,7 @@ export default function FeaturedWork() {
         initial={{ opacity: 0, y: 30 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="editorial-container pt-0 pb-16 md:pb-20 -mt-6"
+        className="editorial-container pt-0 pb-10 md:pb-20 -mt-10 md:-mt-6"
       >
         <CardStack
           items={works}

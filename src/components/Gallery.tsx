@@ -68,9 +68,9 @@ export default function Gallery() {
 
         {/* Mobile */}
         <div className="grid md:hidden grid-cols-2 gap-2">
-          {images.map((img) => (
-            <div key={img.alt} className="relative aspect-square overflow-hidden group">
-              <Image src={img.src} fill sizes="50vw" alt={img.alt} className="object-cover" />
+          {images.map((img, i) => (
+            <div key={img.alt} className={`relative overflow-hidden group ${i === 4 ? "col-span-2 aspect-[2/1]" : "aspect-square"}`}>
+              <Image src={img.src} fill sizes={i === 4 ? "100vw" : "50vw"} alt={img.alt} className="object-cover" />
             </div>
           ))}
         </div>

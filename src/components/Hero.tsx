@@ -42,37 +42,47 @@ export default function Hero() {
         </h1>
       </motion.div>
 
-      {/* Left side accent */}
+      {/* EST. 2015 — mobile: horizontal bottom center | desktop: vertical left */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.2, delay: 1.0 }}
-        className="absolute z-[26] left-6 md:left-10 top-[7%] md:top-1/2 md:-translate-y-1/2 flex flex-col items-center gap-3 scale-[0.55] md:scale-100 origin-top-left"
+        className="absolute z-[26] bottom-[110px] left-1/2 -translate-x-1/2 flex flex-row items-center gap-3 md:hidden"
+      >
+        <div className="h-px w-8 bg-brand-gray-700" />
+        <p className="font-body text-[9px] uppercase tracking-[0.2em] text-brand-gray-500">EST. 2015</p>
+        <div className="w-1 h-1 bg-brand-red" />
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.2, delay: 1.0 }}
+        className="absolute z-[26] hidden md:flex left-10 top-1/2 -translate-y-1/2 flex-col items-center gap-3"
       >
         <div className="w-px h-20 bg-brand-gray-700" />
-        <p
-          className="label-text text-brand-gray-500"
-          style={{ writingMode: "vertical-rl", letterSpacing: "0.2em" }}
-        >
-          EST. 2015
-        </p>
+        <p className="label-text text-brand-gray-500" style={{ writingMode: "vertical-rl", letterSpacing: "0.2em" }}>EST. 2015</p>
         <div className="w-1 h-1 bg-brand-red" />
       </motion.div>
 
-      {/* Right side accent */}
+      {/* WARSAW · PL — mobile: horizontal top center | desktop: vertical right */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.2, delay: 1.0 }}
-        className="absolute z-[26] right-6 md:right-10 bottom-[120px] md:bottom-auto md:top-1/2 md:-translate-y-1/2 flex flex-col items-center gap-3 scale-[0.55] md:scale-100 origin-bottom-right"
+        className="absolute z-[26] top-[72px] left-1/2 -translate-x-1/2 flex flex-row items-center gap-3 md:hidden"
       >
         <div className="w-1 h-1 bg-brand-red" />
-        <p
-          className="label-text text-brand-gray-500"
-          style={{ writingMode: "vertical-rl", letterSpacing: "0.2em" }}
-        >
-          WARSAW · PL
-        </p>
+        <p className="font-body text-[9px] uppercase tracking-[0.2em] text-brand-gray-500">WARSAW · PL</p>
+        <div className="h-px w-8 bg-brand-gray-700" />
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.2, delay: 1.0 }}
+        className="absolute z-[26] hidden md:flex right-10 top-1/2 -translate-y-1/2 flex-col items-center gap-3"
+      >
+        <div className="w-1 h-1 bg-brand-red" />
+        <p className="label-text text-brand-gray-500" style={{ writingMode: "vertical-rl", letterSpacing: "0.2em" }}>WARSAW · PL</p>
         <div className="w-px h-20 bg-brand-gray-700" />
       </motion.div>
 

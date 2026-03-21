@@ -42,7 +42,7 @@ export default function Services() {
       {/* Cards — full-width border wrapper to avoid double-border */}
       <div className="border-b border-brand-gray-700">
         <div className="editorial-container">
-          <div className="grid grid-cols-2 md:grid-cols-5">
+          <div className="grid grid-cols-5">
             {services.map((s, i) => (
               <motion.a
                 key={s.id}
@@ -53,24 +53,19 @@ export default function Services() {
                 className={`group flex flex-col cursor-pointer
                   border-t-2 border-t-transparent hover:border-t-brand-red
                   transition-all duration-300
-                  ${i === 4 ? "col-span-2 md:col-span-1" : ""}
-                  ${i % 2 !== 0 && i !== 4 ? "border-l border-brand-gray-700" : ""}
-                  ${i > 0 && i % 2 === 0 ? "md:border-l md:border-brand-gray-700" : ""}
-                  ${i < 4 ? "border-b border-brand-gray-700 md:border-b-0" : ""}
+                  ${i > 0 ? "border-l border-brand-gray-700" : ""}
                 `}
               >
                 {/* Content */}
-                <div className="flex flex-col justify-between flex-1 p-5 md:p-6">
-                  <div className="flex justify-between items-center mb-4">
-                    <span className="label-text text-brand-gray-500">{s.number}</span>
-                    <span className="text-brand-gray-700 group-hover:text-brand-red transition-colors duration-300 text-sm">
-                      →
-                    </span>
+                <div className="flex flex-col justify-between flex-1 p-2 md:p-6 py-4 md:py-6">
+                  <div className="flex justify-between items-center mb-2 md:mb-4">
+                    <span className="font-body text-[9px] md:text-[10px] uppercase tracking-[0.12em] text-brand-gray-500">{s.number}</span>
+                    <span className="hidden md:block text-brand-gray-700 group-hover:text-brand-red transition-colors duration-300 text-sm">→</span>
                   </div>
                   <div>
-                    <p className="label-text text-brand-red mb-2">{s.subtitle}</p>
+                    <p className="font-body text-[8px] md:text-[10px] uppercase tracking-[0.1em] text-brand-red mb-1 md:mb-2">{s.subtitle}</p>
                     <h3
-                      className="font-display text-brand-white leading-[0.9]"
+                      className="hidden md:block font-display text-brand-white leading-[0.9]"
                       style={{ fontSize: "clamp(1rem, 1.6vw, 1.4rem)" }}
                     >
                       {s.title}
