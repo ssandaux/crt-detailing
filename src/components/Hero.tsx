@@ -29,11 +29,11 @@ export default function Hero() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9, ease: [0.25, 0.1, 0.25, 1], delay: 0.2 }}
-        className="absolute z-[10] w-full text-center top-[20%] md:top-[15%]"
+        className="absolute z-[10] w-full text-center top-[40%] md:top-[15%]"
       >
         <h1
           className="font-display text-brand-white leading-none select-none whitespace-nowrap"
-          style={{ fontSize: "clamp(4rem, 18vw, 17rem)" }}
+          style={{ fontSize: "clamp(5.5rem, 22vw, 17rem)" }}
         >
           WORKSHOP
         </h1>
@@ -90,7 +90,7 @@ export default function Hero() {
         style={{ left: 0 }}
       >
         {/* Car images */}
-        <div className="absolute inset-0">
+        <div className="absolute inset-0 scale-[1.5] md:scale-100 origin-top">
 
           {/* Glow layer */}
           <div
