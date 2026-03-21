@@ -82,19 +82,6 @@ export default function Hero() {
         onMouseLeave={() => setGlowActive(false)}
       />
 
-      {/* Subtitle — blur in */}
-      <motion.div
-        initial={{ filter: "blur(12px)", opacity: 0 }}
-        animate={{ filter: "blur(0px)", opacity: 1 }}
-        transition={{ duration: 1.2, delay: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
-        className="absolute z-[12] w-full text-center"
-        style={{ top: "calc(15% + clamp(4rem, 18vw, 17rem) * 0.95)" }}
-      >
-        <p className="label-text text-brand-gray-500 tracking-[0.3em]">
-          Paint Correction · Ceramic Coating · Interior Detailing
-        </p>
-      </motion.div>
-
       {/* LAYER 3 — Машина ПОВЕРХ текста */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
