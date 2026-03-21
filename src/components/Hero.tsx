@@ -90,7 +90,7 @@ export default function Hero() {
         style={{ left: 0 }}
       >
         {/* Car images */}
-        <div className="absolute inset-0 scale-[1.5] md:scale-100 origin-top">
+        <div className="absolute inset-0 scale-[1.3] md:scale-100 origin-top">
 
           {/* Glow layer */}
           <div
