@@ -24,8 +24,8 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-brand-black/60 via-brand-black/10 to-brand-black/20 z-[1]" />
       <div className="absolute inset-0 bg-gradient-to-r from-brand-black/50 via-transparent to-brand-black/30 z-[1]" />
 
-      {/* Mobile: bottom-to-halfway darkening */}
-      <div className="absolute inset-0 md:hidden bg-gradient-to-t from-brand-black via-brand-black/70 to-transparent z-[2]" />
+      {/* Mobile: bottom-to-halfway darkening — over the car */}
+      <div className="absolute inset-x-0 bottom-0 h-1/2 md:hidden bg-gradient-to-t from-brand-black via-brand-black/80 to-transparent z-[25]" />
 
       {/* LAYER 2 — Большой заголовок (под машиной) */}
       <motion.div
