@@ -88,9 +88,10 @@ export default function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.0, ease: [0.25, 0.1, 0.25, 1], delay: 0.5 }}
         className="absolute z-[20] w-full"
-        style={{ bottom: 0, left: 0 }}
+        style={{ bottom: 0, left: 0, height: "88vh" }}
       >
-        <div className="relative w-full scale-[3] md:scale-100 origin-bottom" style={{ height: "88vh" }}>
+        {/* Car images — scaled on mobile only */}
+        <div className="absolute inset-0 scale-[2] md:scale-100 origin-bottom">
 
           {/* Glow layer — top half only, masked out at bottom */}
           <div
@@ -126,13 +127,13 @@ export default function Hero() {
             alt="Car"
             className="object-contain object-bottom"
           />
-
-          {/* Bottom fade — darkens lower 30% */}
-          <div
-            className="absolute inset-0 pointer-events-none"
-            style={{ background: "linear-gradient(to top, rgba(10,10,10,1) 0%, rgba(10,10,10,1) 20%, rgba(10,10,10,0.85) 35%, rgba(10,10,10,0.4) 50%, transparent 62%)" }}
-          />
         </div>
+
+        {/* Bottom fade — separate from scale, always covers the bottom */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{ background: "linear-gradient(to top, rgba(10,10,10,1) 0%, rgba(10,10,10,1) 15%, rgba(10,10,10,0.7) 30%, rgba(10,10,10,0.2) 50%, transparent 65%)" }}
+        />
       </motion.div>
 
       {/* Bottom center — scroll button */}
