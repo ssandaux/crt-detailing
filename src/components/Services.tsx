@@ -2,14 +2,13 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import Image from "next/image";
 
 const services = [
-  { id: 1, number: "01", title: "PAINT CORRECTION", subtitle: "Exterior", href: "#contact", image: "/images/new/4.jpg" },
-  { id: 2, number: "02", title: "CERAMIC COATING", subtitle: "Protection", href: "#contact", image: "/images/new/5.jpg" },
-  { id: 3, number: "03", title: "INTERIOR DETAILING", subtitle: "Interior", href: "#contact", image: "/images/new/6.jpg" },
-  { id: 4, number: "04", title: "ENGINE DETAILING", subtitle: "Mechanical", href: "#contact", image: "/images/new/7.jpg" },
-  { id: 5, number: "05", title: "VINYL WRAP", subtitle: "Styling", href: "#contact", image: "/images/new/9.jpg" },
+  { id: 1, number: "01", title: "PAINT CORRECTION", subtitle: "Exterior", href: "#contact" },
+  { id: 2, number: "02", title: "CERAMIC COATING", subtitle: "Protection", href: "#contact" },
+  { id: 3, number: "03", title: "INTERIOR DETAILING", subtitle: "Interior", href: "#contact" },
+  { id: 4, number: "04", title: "ENGINE DETAILING", subtitle: "Mechanical", href: "#contact" },
+  { id: 5, number: "05", title: "VINYL WRAP", subtitle: "Styling", href: "#contact" },
 ];
 
 export default function Services() {
@@ -58,18 +57,6 @@ export default function Services() {
                   ${i < 2 ? "border-b border-brand-gray-700 md:border-b-0" : ""}
                 `}
               >
-                {/* Image */}
-                <div className="relative h-7 md:h-8 overflow-hidden">
-                  <Image
-                    src={s.image}
-                    fill
-                    sizes="(max-width: 768px) 50vw, 20vw"
-                    alt={s.title}
-                    className="object-cover group-hover:scale-105 transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-brand-black/30 group-hover:bg-brand-black/10 transition-colors duration-500" />
-                </div>
-
                 {/* Content */}
                 <div className="flex flex-col justify-between flex-1 p-5 md:p-6">
                   <div className="flex justify-between items-center mb-4">
