@@ -62,9 +62,9 @@ export default function Services() {
             >
               {s.title}
             </h3>
-            <div className="flex flex-col items-end gap-1 shrink-0">
+            <div className="flex items-center gap-2 shrink-0">
               <span className="font-body text-[9px] uppercase tracking-[0.12em] text-brand-red">{s.subtitle}</span>
-              <span className="text-brand-gray-700 group-hover:text-brand-red transition-colors duration-300 text-sm leading-none">→</span>
+              <span className="text-brand-gray-700 group-hover:text-brand-red transition-colors duration-300 text-xs leading-none">→</span>
             </div>
           </motion.a>
         ))}
