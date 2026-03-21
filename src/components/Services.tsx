@@ -39,8 +39,39 @@ export default function Services() {
         </motion.div>
       </div>
 
-      {/* Cards — full-width border wrapper to avoid double-border */}
-      <div className="border-b border-brand-gray-700">
+      {/* Mobile: vertical editorial list */}
+      <div className="md:hidden editorial-container border-b border-brand-gray-700">
+        {services.map((s, i) => (
+          <motion.a
+            key={s.id}
+            href={s.href}
+            initial={{ opacity: 0, x: -20 }}
+            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.5, delay: 0.15 + i * 0.08 }}
+            className={`group flex items-center gap-4 py-5 ${i < services.length - 1 ? "border-b border-brand-gray-700" : ""}`}
+          >
+            <span
+              className="font-display text-brand-red leading-none shrink-0 w-10"
+              style={{ fontSize: "clamp(1.6rem, 6vw, 2rem)" }}
+            >
+              {s.number}
+            </span>
+            <h3
+              className="font-display text-brand-white leading-none flex-1"
+              style={{ fontSize: "clamp(1.4rem, 5.5vw, 1.8rem)" }}
+            >
+              {s.title}
+            </h3>
+            <div className="flex flex-col items-end gap-1 shrink-0">
+              <span className="font-body text-[9px] uppercase tracking-[0.12em] text-brand-red">{s.subtitle}</span>
+              <span className="text-brand-gray-700 group-hover:text-brand-red transition-colors duration-300 text-sm leading-none">→</span>
+            </div>
+          </motion.a>
+        ))}
+      </div>
+
+      {/* Desktop: 5-col grid */}
+      <div className="hidden md:block border-b border-brand-gray-700">
         <div className="editorial-container">
           <div className="grid grid-cols-5">
             {services.map((s, i) => (
@@ -56,16 +87,15 @@ export default function Services() {
                   ${i > 0 ? "border-l border-brand-gray-700" : ""}
                 `}
               >
-                {/* Content */}
-                <div className="flex flex-col justify-between flex-1 p-2 md:p-6 py-4 md:py-6">
-                  <div className="flex justify-between items-center mb-2 md:mb-4">
-                    <span className="font-body text-[9px] md:text-[10px] uppercase tracking-[0.12em] text-brand-gray-500">{s.number}</span>
-                    <span className="hidden md:block text-brand-gray-700 group-hover:text-brand-red transition-colors duration-300 text-sm">→</span>
+                <div className="flex flex-col justify-between flex-1 p-6 py-6">
+                  <div className="flex justify-between items-center mb-4">
+                    <span className="font-body text-[10px] uppercase tracking-[0.12em] text-brand-gray-500">{s.number}</span>
+                    <span className="text-brand-gray-700 group-hover:text-brand-red transition-colors duration-300 text-sm">→</span>
                   </div>
                   <div>
-                    <p className="font-body text-[8px] md:text-[10px] uppercase tracking-[0.1em] text-brand-red mb-1 md:mb-2">{s.subtitle}</p>
+                    <p className="font-body text-[10px] uppercase tracking-[0.1em] text-brand-red mb-2">{s.subtitle}</p>
                     <h3
-                      className="hidden md:block font-display text-brand-white leading-[0.9]"
+                      className="font-display text-brand-white leading-[0.9]"
                       style={{ fontSize: "clamp(1rem, 1.6vw, 1.4rem)" }}
                     >
                       {s.title}
