@@ -26,7 +26,7 @@ export default function WhyUs() {
           initial={{ opacity: 0, x: -30 }}
           animate={isInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.9 }}
-          className="relative h-[300px] md:h-auto min-h-[500px] overflow-hidden order-2 md:order-1"
+          className="relative h-[300px] md:h-auto min-h-[500px] overflow-hidden order-2 md:order-1 hidden md:block"
         >
           <Image
             src="/images/new/3.jpg"
