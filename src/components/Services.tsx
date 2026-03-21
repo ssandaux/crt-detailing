@@ -18,7 +18,7 @@ export default function Services() {
   return (
     <section id="services" className="bg-brand-black border-t border-brand-gray-700">
       {/* Heading */}
-      <div className="editorial-container pt-20 pb-12 border-b border-brand-gray-700">
+      <div className="editorial-container pt-8 pb-6 md:pt-20 md:pb-12 border-b border-brand-gray-700">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 30 }}
@@ -40,7 +40,7 @@ export default function Services() {
       </div>
 
       {/* Mobile: vertical editorial list */}
-      <div className="md:hidden editorial-container border-b border-brand-gray-700">
+      <div className="md:hidden editorial-container pb-6 border-b border-brand-gray-700">
         {services.map((s, i) => (
           <motion.a
             key={s.id}
