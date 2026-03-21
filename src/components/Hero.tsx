@@ -29,8 +29,7 @@ export default function Hero() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9, ease: [0.25, 0.1, 0.25, 1], delay: 0.2 }}
-        className="absolute z-[10] w-full text-center"
-        style={{ top: "15%" }}
+        className="absolute z-[10] w-full text-center top-[20%] md:top-[15%]"
       >
         <h1
           className="font-display text-brand-white leading-none select-none whitespace-nowrap"
@@ -87,13 +86,13 @@ export default function Hero() {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.0, ease: [0.25, 0.1, 0.25, 1], delay: 0.5 }}
-        className="absolute z-[20] w-full"
-        style={{ bottom: 0, left: 0, height: "88vh" }}
+        className="absolute z-[20] w-full top-[30%] h-[60vh] md:top-auto md:bottom-0 md:h-[88vh]"
+        style={{ left: 0 }}
       >
-        {/* Car images — scaled on mobile only */}
-        <div className="absolute inset-0 scale-[2] md:scale-100 origin-bottom">
+        {/* Car images */}
+        <div className="absolute inset-0">
 
-          {/* Glow layer — top half only, masked out at bottom */}
+          {/* Glow layer */}
           <div
             className="absolute inset-0 transition-opacity duration-500"
             style={{
@@ -108,7 +107,7 @@ export default function Hero() {
               sizes="100vw"
               alt=""
               aria-hidden
-              className="object-contain object-bottom"
+              className="object-contain object-top md:object-bottom"
               style={{
                 filter: glowActive
                   ? "drop-shadow(0 0 60px rgba(212, 43, 43, 0.7)) drop-shadow(0 0 120px rgba(212, 43, 43, 0.4))"
@@ -118,18 +117,18 @@ export default function Hero() {
             />
           </div>
 
-          {/* Base car — no glow */}
+          {/* Base car */}
           <Image
             src="/images/carfree.png"
             fill
             sizes="100vw"
             priority
             alt="Car"
-            className="object-contain object-bottom"
+            className="object-contain object-top md:object-bottom"
           />
         </div>
 
-        {/* Bottom fade — separate from scale, always covers the bottom */}
+        {/* Bottom fade */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{ background: "linear-gradient(to top, rgba(10,10,10,1) 0%, rgba(10,10,10,1) 15%, rgba(10,10,10,0.7) 30%, rgba(10,10,10,0.2) 50%, transparent 65%)" }}
