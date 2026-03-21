@@ -71,25 +71,25 @@ export default function Contact() {
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="editorial-container py-14"
+        className="editorial-container py-8 md:py-14"
       >
         <form className="w-full" onSubmit={handleSubmit}>
           <div className="grid md:grid-cols-2 gap-0 md:gap-12">
-            <div className="mb-8 md:mb-0">
-              <label className="label-text block mb-3">Your Name</label>
+            <div className="mb-5 md:mb-0">
+              <label className="label-text block mb-2 md:mb-3">Your Name</label>
               <input type="text" name="name" value={form.name} onChange={handleChange}
                 placeholder="John Smith" className={inputClass} />
             </div>
-            <div className="mb-8 md:mb-0">
-              <label className="label-text block mb-3">Phone</label>
+            <div className="mb-5 md:mb-0">
+              <label className="label-text block mb-2 md:mb-3">Phone</label>
               <input type="tel" name="phone" value={form.phone} onChange={handleChange}
                 placeholder="+48 501 234 567" className={inputClass} />
             </div>
           </div>
 
           {/* Service selector */}
-          <div className="mt-8">
-            <label className="label-text block mb-3">Service</label>
+          <div className="mt-5 md:mt-8">
+            <label className="label-text block mb-2 md:mb-3">Service</label>
             <FloatingActionPanelRoot className="w-full">
               {({ isOpen, closePanel }) => (
                 <>
@@ -134,14 +134,14 @@ export default function Contact() {
             </FloatingActionPanelRoot>
           </div>
 
-          <div className="mt-8">
-            <label className="label-text block mb-3">Message</label>
+          <div className="mt-5 md:mt-8">
+            <label className="label-text block mb-2 md:mb-3">Message</label>
             <textarea name="message" value={form.message} onChange={handleChange}
               rows={3} placeholder="Tell us about your vehicle..."
               className={`${inputClass} resize-none`} />
           </div>
 
-          <div className="mt-12">
+          <div className="mt-8 md:mt-12">
             <MotionButton label="Send Request" type="submit" disabled={!isComplete} />
           </div>
         </form>

@@ -69,7 +69,7 @@ export default function FeaturedWork() {
 
   return (
     <section className="bg-brand-black border-t border-brand-gray-700 overflow-hidden">
-      <div className="editorial-container pt-10 md:pt-20 pb-3 md:pb-8">
+      <div className="editorial-container pt-5 md:pt-20 pb-3 md:pb-8">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 40 }}

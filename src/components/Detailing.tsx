@@ -3,7 +3,6 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
-import { MotionButton } from "@/components/ui/motion-button";
 
 const features = [
   {
@@ -83,10 +82,9 @@ export default function Detailing() {
                   >
                     {f.title}
                   </h3>
-                  <p className="font-body text-xs text-brand-gray-300 leading-relaxed max-w-xs mb-6">
+                  <p className="font-body text-xs text-brand-gray-300 leading-relaxed max-w-xs">
                     {f.desc}
                   </p>
-                  <MotionButton label="Book Service" href="#contact" />
                 </div>
               </div>
             </motion.div>
