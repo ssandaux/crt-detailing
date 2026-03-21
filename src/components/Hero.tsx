@@ -47,7 +47,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.2, delay: 1.0 }}
-        className="absolute z-[26] bottom-[110px] left-1/2 -translate-x-1/2 flex flex-row items-center gap-3 md:hidden"
+        className="absolute z-[26] bottom-[220px] left-1/2 -translate-x-1/2 flex flex-row items-center gap-3 md:hidden"
       >
         <div className="h-px w-8 bg-brand-gray-700" />
         <p className="font-body text-[9px] uppercase tracking-[0.2em] text-brand-gray-500">EST. 2015</p>
@@ -69,7 +69,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.2, delay: 1.0 }}
-        className="absolute z-[26] top-[72px] left-1/2 -translate-x-1/2 flex flex-row items-center gap-3 md:hidden"
+        className="absolute z-[26] top-[144px] left-1/2 -translate-x-1/2 flex flex-row items-center gap-3 md:hidden"
       >
         <div className="w-1 h-1 bg-brand-red" />
         <p className="font-body text-[9px] uppercase tracking-[0.2em] text-brand-gray-500">WARSAW · PL</p>
