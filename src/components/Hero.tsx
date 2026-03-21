@@ -90,7 +90,7 @@ export default function Hero() {
         className="absolute z-[20] w-full"
         style={{ bottom: 0, left: 0 }}
       >
-        <div className="relative w-full" style={{ height: "88vh" }}>
+        <div className="relative w-full scale-[3] md:scale-100 origin-bottom" style={{ height: "88vh" }}>
 
           {/* Glow layer — top half only, masked out at bottom */}
           <div
