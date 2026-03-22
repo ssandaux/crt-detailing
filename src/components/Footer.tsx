@@ -61,9 +61,8 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div>
-        <div className="editorial-container py-5 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="editorial-container py-5 flex items-center justify-center md:justify-between">
           <p className="label-text">&copy; {year} Redline Detailing Warsaw. All rights reserved.</p>
-          <p className="label-text text-brand-gray-500">Premium Auto Care Studio · Warsaw, Poland</p>
         </div>
       </div>
     </footer>

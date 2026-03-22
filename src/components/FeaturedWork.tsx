@@ -11,7 +11,7 @@ const works = [
     title: "Mirror finish",
     tag: "Result",
     description: "Zero defects visible under studio lighting, confirmed before every handover.",
-    imageSrc: "/images/new/4.jpg",
+    imageSrc: "/images/new/1.jpg",
   },
   {
     id: 2,
@@ -97,7 +97,7 @@ export default function FeaturedWork() {
         initial={{ opacity: 0, y: 30 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="editorial-container pt-0 pb-10 md:pb-20 -mt-16 md:-mt-6"
+        className="editorial-container pt-0 pb-10 md:pb-20 -mt-20 md:-mt-6"
       >
         <CardStack
           items={works}

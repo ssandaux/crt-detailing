@@ -18,7 +18,7 @@ export default function Process() {
   return (
     <section className="bg-brand-black border-t border-brand-gray-700">
       {/* Heading */}
-      <div className="editorial-container pt-14 pb-0">
+      <div className="editorial-container pt-8 pb-0 md:pt-14">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 30 }}
@@ -40,7 +40,7 @@ export default function Process() {
       </div>
 
       {/* Mobile: vertical stack */}
-      <div className="editorial-container py-10 md:hidden">
+      <div className="editorial-container py-6 md:hidden">
         <div className="flex flex-col">
           {steps.map((step, i) => (
             <motion.div
