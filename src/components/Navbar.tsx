@@ -41,12 +41,12 @@ export default function Navbar() {
       >
         <div className="editorial-container flex items-center justify-between">
           {/* Logo — hide when menu open to avoid double logo */}
-          <a href="#" className={`flex items-center transition-opacity duration-300 ${menuOpen ? "opacity-0 pointer-events-none" : ""}`}>
+          <a href="#" className={`flex items-center transition-opacity duration-300 ${menuOpen ? "opacity-0 pointer-events-none md:opacity-100 md:pointer-events-auto" : ""}`}>
             <Image src="/images/logi.png" alt="Redline" width={120} height={40} className="object-contain" />
           </a>
 
           {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-10">
+          <nav className={`${menuOpen ? "hidden" : "hidden md:flex"} items-center gap-10`}>
             {navLinks.map((link) => (
               <a
                 key={link.label}
@@ -61,7 +61,7 @@ export default function Navbar() {
           {/* Book button + lang switcher + hamburger */}
           <div className="flex items-center gap-6">
             {/* Language switcher */}
-            <div className="hidden md:flex items-center gap-1">
+            <div className={`${menuOpen ? "hidden" : "hidden md:flex"} items-center gap-1`}>
               {(["EN", "PL"] as const).map((l, i) => (
                 <span key={l} className="flex items-center gap-1">
                   {i > 0 && <span className="label-text text-brand-gray-700">/</span>}
@@ -78,7 +78,7 @@ export default function Navbar() {
             </div>
             <a
               href="#contact"
-              className="hidden md:inline-flex items-center gap-2 label-text text-brand-white border border-brand-gray-700 px-5 py-2.5 hover:border-brand-red transition-colors duration-200 relative overflow-hidden group"
+              className={`${menuOpen ? "hidden" : "hidden md:inline-flex"} items-center gap-2 label-text text-brand-white border border-brand-gray-700 px-5 py-2.5 hover:border-brand-red transition-colors duration-200 relative overflow-hidden group`}
             >
               <span className="absolute top-0 left-0 w-1/2 h-1/2 bg-brand-red -translate-x-full -translate-y-full group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300 ease-[cubic-bezier(0.25,0.1,0.25,1)]" />
               <span className="absolute top-0 right-0 w-1/2 h-1/2 bg-brand-red translate-x-full -translate-y-full group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300 ease-[cubic-bezier(0.25,0.1,0.25,1)]" />
@@ -122,7 +122,7 @@ export default function Navbar() {
             className="fixed inset-0 bg-brand-black z-40 flex flex-col justify-between overflow-hidden"
           >
             {/* Top bar — logo centered */}
-            <div className="editorial-container pt-6 pb-6 flex items-center justify-center border-b border-brand-gray-700">
+            <div className="editorial-container pt-6 pb-6 flex items-center justify-center border-b border-brand-gray-700 md:hidden">
               <Image src="/images/logi.png" alt="Redline" width={120} height={40} className="object-contain" />
             </div>
 
